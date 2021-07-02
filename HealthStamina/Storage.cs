@@ -9,5 +9,6 @@ namespace HealthStamina
         internal static BepInExLogger Logger;
         internal static int StaminaModifier;
         internal static int HealthModifier;
+        internal static int healModifier;
     }
 }

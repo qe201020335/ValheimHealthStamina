@@ -50,8 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EatFoodPatch.cs" />
+    <Compile Include="HealPatch.cs" />
     <Compile Include="HealthStamina.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
