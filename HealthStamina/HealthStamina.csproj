@@ -52,6 +52,7 @@
     <Compile Include="EatFoodPatch.cs" />
     <Compile Include="HealPatch.cs" />
     <Compile Include="HealthStamina.cs" />
+    <Compile Include="RunPatch.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

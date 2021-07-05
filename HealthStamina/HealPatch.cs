@@ -16,7 +16,7 @@ namespace HealthStamina
             if (__instance.GetType().IsSubclassOf(typeof(Player)) || __instance.GetType() == typeof(Player))
             {
                 Storage.Logger.LogDebug($"Heal {hp}");
-                hp *= Storage.healModifier;
+                hp *= Storage.healModifier.Value;
                 Storage.Logger.LogDebug($"Healed {hp}");
             }
         }

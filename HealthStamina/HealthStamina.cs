@@ -11,29 +11,23 @@ namespace HealthStamina
     public class HealthStamina : BaseUnityPlugin
     {
         private ConfigEntry<bool> testGreeting;
-        private ConfigEntry<int> staminaModifier;
-        private ConfigEntry<int> healthModifier;
-        private ConfigEntry<int> healModifier;
-        
         void Awake()
         {
             testGreeting = Config.Bind("Test", "Greeting", false, "Nah");
 
-            staminaModifier = Config.Bind("Modifier", "Stamina", 10, "Stamina Modifier");
-            healthModifier = Config.Bind("Modifier", "Health", 5, "Health Modifier");
-            healModifier = Config.Bind("Modifier", "Heal", 5, "Heal Modifier");
-
+            Storage.StaminaModifier = Config.Bind("Modifier", "Stamina", 10, "Stamina Modifier");
+            Storage.HealthModifier = Config.Bind("Modifier", "Health", 5, "Health Modifier");
+            Storage.healModifier = Config.Bind("Modifier", "Heal", 5, "Heal Modifier");
+            Storage.runSpeed = Config.Bind("Modifier", "runSpeed", 20f, "Run speed");
+            Storage.jumpForce = Config.Bind("Modifier", "jumpForce", 5f, "Jump Force");
+            Storage.swimSpeed = Config.Bind("Modifier", "swimSpeed", 5f, "Swim Speed");
+            
             Storage.Logger = Logger;
-
             if (testGreeting.Value)
             {
                 Logger.LogInfo("Hello, world!");
             }
 
-            Storage.HealthModifier = healthModifier.Value;
-            Storage.StaminaModifier = staminaModifier.Value;
-            Storage.healModifier = healModifier.Value;
-            
             Logger.LogInfo("Start Patching");
             var harmony = new Harmony("org.skyqe.plugins.HealthStamina");
             var assembly = Assembly.GetExecutingAssembly();

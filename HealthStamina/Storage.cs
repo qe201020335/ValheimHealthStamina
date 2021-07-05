@@ -7,8 +7,11 @@ namespace HealthStamina
     public class Storage
     {
         internal static BepInExLogger Logger;
-        internal static int StaminaModifier;
-        internal static int HealthModifier;
-        internal static int healModifier;
+        internal static ConfigEntry<int> StaminaModifier;
+        internal static ConfigEntry<int> HealthModifier;
+        internal static ConfigEntry<int> healModifier;
+        internal static ConfigEntry<float> runSpeed;
+        internal static ConfigEntry<float> jumpForce;
+        internal static ConfigEntry<float> swimSpeed;
     }
 }
