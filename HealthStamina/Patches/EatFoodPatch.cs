@@ -8,7 +8,7 @@ namespace HealthStamina.Patches
     {
         
         
-        static void Prefix(ItemDrop.ItemData item)
+        private static void Prefix(ItemDrop.ItemData item)
         {
             Storage.Logger.LogDebug($"Eat {item.m_shared.m_name}");
             Storage.Logger.LogDebug($"{item.m_shared.m_food}, {item.m_shared.m_foodStamina}");
@@ -16,7 +16,7 @@ namespace HealthStamina.Patches
             item.m_shared.m_foodStamina *= Storage.StaminaModifier.Value;
         }
 
-        static void Postfix(ItemDrop.ItemData item)
+        private static void Postfix(ItemDrop.ItemData item)
         {
             Storage.Logger.LogDebug($"Eaten {item.m_shared.m_name}");
             Storage.Logger.LogDebug($"{item.m_shared.m_food}, {item.m_shared.m_foodStamina}");

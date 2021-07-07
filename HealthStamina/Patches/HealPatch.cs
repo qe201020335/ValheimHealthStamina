@@ -6,7 +6,7 @@ namespace HealthStamina.Patches
     [HarmonyPatch(typeof(Character), "Heal")]
     public class HealPatch
     {
-        static void Prefix(ref float hp, bool showText, Character __instance)
+        private static void Prefix(ref float hp, bool showText, Character __instance)
         {
             
 #if DEBUG

@@ -6,7 +6,7 @@ namespace HealthStamina.Patches
     [HarmonyPatch(typeof(Player), "CheckRun")]
     public class RunPatch
     {
-        static void Prefix(Vector3 moveDir, float dt, Character __instance)
+        private static void Prefix(Vector3 moveDir, float dt, Character __instance)
         {
             /*
             if (__instance.GetType().IsSubclassOf(typeof(Player)) || __instance.GetType() == typeof(Player))

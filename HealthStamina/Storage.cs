@@ -4,7 +4,7 @@ using BepInEx.Configuration;
 
 namespace HealthStamina
 {
-    public class Storage
+    internal class Storage
     {
         internal static BepInExLogger Logger;
         internal static ConfigEntry<int> StaminaModifier;
