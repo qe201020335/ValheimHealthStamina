@@ -1,8 +1,7 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 
-
-namespace HealthStamina
+namespace HealthStamina.Patches
 {
     [HarmonyPatch(typeof(Player), "CheckRun")]
     public class RunPatch

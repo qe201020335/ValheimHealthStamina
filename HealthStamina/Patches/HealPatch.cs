@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 
-namespace HealthStamina
+namespace HealthStamina.Patches
 {
     [HarmonyPatch(typeof(Character), "Heal")]
     public class HealPatch

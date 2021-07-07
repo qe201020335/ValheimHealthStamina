@@ -49,12 +49,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EatFoodPatch.cs" />
-    <Compile Include="HealPatch.cs" />
     <Compile Include="HealthStamina.cs" />
-    <Compile Include="RunPatch.cs" />
-    <Compile Include="Storage.cs" />
+    <Compile Include="Patches\ConsolePatch.cs" />
+    <Compile Include="Patches\EatFoodPatch.cs" />
+    <Compile Include="Patches\HealPatch.cs" />
+    <Compile Include="Patches\RunPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
